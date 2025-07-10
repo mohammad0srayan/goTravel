@@ -1,8 +1,10 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))c(e);new MutationObserver(e=>{for(const i of e)if(i.type==="childList")for(const a of i.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&c(a)}).observe(document,{childList:!0,subtree:!0});function s(e){const i={};return e.integrity&&(i.integrity=e.integrity),e.referrerPolicy&&(i.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?i.credentials="include":e.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function c(e){if(e.ep)return;e.ep=!0;const i=s(e);fetch(e.href,i)}})();let b=document.querySelector(".back-site"),g=document.querySelector(".sec-items"),y=document.querySelector(".user-box"),v=document.querySelector(".btn-form"),S=document.querySelector("input"),u=document.createElement("template");u.innerHTML=`
-    <link rel="stylesheet" href="/src/style.css">   
+(function () { const t = document.createElement("link").relList; if (t && t.supports && t.supports("modulepreload")) return; for (const e of document.querySelectorAll('link[rel="modulepreload"]')) c(e); new MutationObserver(e => { for (const i of e) if (i.type === "childList") for (const a of i.addedNodes) a.tagName === "LINK" && a.rel === "modulepreload" && c(a) }).observe(document, { childList: !0, subtree: !0 }); function s(e) { const i = {}; return e.integrity && (i.integrity = e.integrity), e.referrerPolicy && (i.referrerPolicy = e.referrerPolicy), e.crossOrigin === "use-credentials" ? i.credentials = "include" : e.crossOrigin === "anonymous" ? i.credentials = "omit" : i.credentials = "same-origin", i } function c(e) { if (e.ep) return; e.ep = !0; const i = s(e); fetch(e.href, i) } })(); let b = document.querySelector(".back-site"), g = document.querySelector(".sec-items"), y = document.querySelector(".user-box"), v = document.querySelector(".btn-form"), S = document.querySelector("input"), u = document.createElement("template"); u.innerHTML = `
+  <link rel="stylesheet" href="assets/index-tJjReJRD.css">
+  <link rel="stylesheet" href="assets/index-BgSAnjhS.css">
     <h2 class='text-2xl text-white flex justify-center items-center gap-2'><ion-icon name="logo-amplify"></ion-icon>GoTravel</h2>
-`;class L extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"}),this.shadowRoot.appendChild(u.content.cloneNode(!0))}}let h=document.createElement("template");h.innerHTML=`
-    <link rel="stylesheet" href="/src/style.css">
+`; class L extends HTMLElement { constructor() { super(), this.attachShadow({ mode: "open" }), this.shadowRoot.appendChild(u.content.cloneNode(!0)) } } let h = document.createElement("template"); h.innerHTML = `
+  <link rel="stylesheet" href="assets/index-tJjReJRD.css">
+  <link rel="stylesheet" href="assets/index-BgSAnjhS.css">   
     <div class="flex justify-center items-center min-[999px]:gap-x-[4rem] max-[999px]:gap-x-[1.5rem]">
     <ul class="flex justify-center items-center gap-[4rem] menu max-[999px]:hidden">
         <li><a class="text-white" href="#">Home</a></li>
@@ -18,11 +20,12 @@
         <button class="flex justify-center items-center text-2xl text-white"><ion-icon name="grid-sharp"></ion-icon></button>
     </div>
     </div>    
-`;class k extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"}),this.shadowRoot.appendChild(h.content.cloneNode(!0))}connectedCallback(){let t=this.shadowRoot.querySelector("#theme"),s=!1;t.addEventListener("click",()=>{b.classList.toggle("dark-mode"),g.classList.toggle("dark-theme"),y.classList.toggle("dark-box"),v.classList.toggle("btn-theme"),S.classList.toggle("theme-input"),s?(t.innerHTML='<ion-icon name="moon-sharp"></ion-icon>',s=!1):(t.innerHTML='<ion-icon name="sunny"></ion-icon>',s=!0)})}}let n=["public/1.jpg","public/2.jpg","public/3.jpg","public/4.jpg","public/5.jpg"],l=0,r=document.querySelector(".background-site"),m=document.createElement("template");m.innerHTML=`
-    <link rel="stylesheet" href="/src/style.css">
+`; class k extends HTMLElement { constructor() { super(), this.attachShadow({ mode: "open" }), this.shadowRoot.appendChild(h.content.cloneNode(!0)) } connectedCallback() { let t = this.shadowRoot.querySelector("#theme"), s = !1; t.addEventListener("click", () => { b.classList.toggle("dark-mode"), g.classList.toggle("dark-theme"), y.classList.toggle("dark-box"), v.classList.toggle("btn-theme"), S.classList.toggle("theme-input"), s ? (t.innerHTML = '<ion-icon name="moon-sharp"></ion-icon>', s = !1) : (t.innerHTML = '<ion-icon name="sunny"></ion-icon>', s = !0) }) } } let n = ["assets/1.jpg", "assets/2.jpg", "assets/3.jpg", "assets/4.jpg", "assets/5.jpg"], l = 0, r = document.querySelector(".background-site"), m = document.createElement("template"); m.innerHTML = `
+  <link rel="stylesheet" href="assets/index-tJjReJRD.css">
+  <link rel="stylesheet" href="assets/index-BgSAnjhS.css">   
     <div class="slider-section relative rounded-2xl min-[850px]:h-[30rem] max-[850px]:h-[20rem] w-[42rem] scale-x-120 max-[1508px]:scale-x-100 max-[680px]:w-full">
 
-    <img class="w-full h-full object-cover rounded-2xl" src="/public/1.jpg">
+    <img class="w-full h-full object-cover rounded-2xl" src="assets/1.jpg">
 
     <div class="absolute right-4 bottom-4 flex justify-center items-center gap-2">
         <button class="back py-[0.5rem] px-3 text-xl bg-btnSlider text-white cursor-pointer flex justify-center items-center hover:bg-white hover:text-black duration-300 ease-in-out"><ion-icon name="arrow-back-outline"></ion-icon></button>
@@ -30,10 +33,11 @@
     </div>
 
     </div>
-`;class E extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"}),this.shadowRoot.appendChild(m.content.cloneNode(!0))}connectedCallback(){let t=this.shadowRoot.querySelector("img"),s=this.shadowRoot.querySelector(".back"),c=this.shadowRoot.querySelector(".next");s.addEventListener("click",()=>{l--,l<0&&(l=n.length-1),r.style.background=`url(${n[l]})`,r.style.backgroundSize="cover",r.style.backgroundPostion="center",t.setAttribute("src",n[l])}),c.addEventListener("click",()=>{l++,l>n.length-1&&(l=0),r.style.background=`url(${n[l]})`,r.style.backgroundSize="cover",r.style.backgroundPostion="center",t.setAttribute("src",n[l])})}}let p=document.createElement("template");p.innerHTML=`
-    <link rel="stylesheet" href="/src/style.css">
+`; class E extends HTMLElement { constructor() { super(), this.attachShadow({ mode: "open" }), this.shadowRoot.appendChild(m.content.cloneNode(!0)) } connectedCallback() { let t = this.shadowRoot.querySelector("img"), s = this.shadowRoot.querySelector(".back"), c = this.shadowRoot.querySelector(".next"); s.addEventListener("click", () => { l--, l < 0 && (l = n.length - 1), r.style.background = `url(${n[l]})`, r.style.backgroundSize = "cover", r.style.backgroundPostion = "center", t.setAttribute("src", n[l]) }), c.addEventListener("click", () => { l++, l > n.length - 1 && (l = 0), r.style.background = `url(${n[l]})`, r.style.backgroundSize = "cover", r.style.backgroundPostion = "center", t.setAttribute("src", n[l]) }) } } let p = document.createElement("template"); p.innerHTML = `
+  <link rel="stylesheet" href="assets/index-tJjReJRD.css">
+  <link rel="stylesheet" href="assets/index-BgSAnjhS.css">   
         <div class="w-full h-[25rem] relative rounded-3xl shadow-2xl">
-            <img class="w-full h-full object-cover rounded-3xl" src="/public/1.jpg" alt="">
+            <img class="w-full h-full object-cover rounded-3xl" src="/assets/1.jpg" alt="">
 
             <div class="modal-items absolute left-0 bottom-0 w-full bg-backDark backdrop-blur-md h-[30%] text-left rounded-3xl p-6 flex flex-col">
                 <span class="city-name text-white tracking-wider">Bali</span>
@@ -41,10 +45,11 @@
                 <span class="location text-white tracking-wider"><ion-icon name="location-sharp"></ion-icon>ISLAND</span>
             </div>
         </div>
-`;class T extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"}),this.shadowRoot.appendChild(p.content.cloneNode(!0))}connectedCallback(){this.shadowRoot.querySelector("img").src=this.getAttribute("img"),this.shadowRoot.querySelector(".city-name").innerHTML=this.getAttribute("city"),this.shadowRoot.querySelector(".country-name").innerHTML=this.getAttribute("title"),this.shadowRoot.querySelector(".location").innerHTML=this.getAttribute("location")}}let H=document.querySelector("template");class M extends HTMLElement{constructor(){super(),console.log("created"),this.attachShadow({mode:"open"}),this.shadowRoot.appendChild(H.content.cloneNode(!0))}}let f=document.createElement("template");f.innerHTML=`
-    <link rel="stylesheet" href="/src/style.css">
+`; class T extends HTMLElement { constructor() { super(), this.attachShadow({ mode: "open" }), this.shadowRoot.appendChild(p.content.cloneNode(!0)) } connectedCallback() { this.shadowRoot.querySelector("img").src = this.getAttribute("img"), this.shadowRoot.querySelector(".city-name").innerHTML = this.getAttribute("city"), this.shadowRoot.querySelector(".country-name").innerHTML = this.getAttribute("title"), this.shadowRoot.querySelector(".location").innerHTML = this.getAttribute("location") } } let H = document.querySelector("template"); class M extends HTMLElement { constructor() { super(), console.log("created"), this.attachShadow({ mode: "open" }), this.shadowRoot.appendChild(H.content.cloneNode(!0)) } } let f = document.createElement("template"); f.innerHTML = `
+  <link rel="stylesheet" href="assets/index-tJjReJRD.css">
+  <link rel="stylesheet" href="assets/index-BgSAnjhS.css">   
     <div class="w-full h-80 relative">
-        <img class="w-full h-full object-cover rounded-3xl img-gallery" src="public/1.jpg" alt="">   
+        <img class="w-full h-full object-cover rounded-3xl img-gallery" src="assets/2.jpg" alt="">   
 
         <div class="absolute left-0 bottom-0 w-full h-25 flex flex-col text-left px-5">
             <span class="city text-white"></span>
@@ -52,12 +57,14 @@
         </div>
     </div>
     
-`;class j extends HTMLElement{constructor(){super(),console.log("created"),this.attachShadow({mode:"open"}),this.shadowRoot.appendChild(f.content.cloneNode(!0))}connectedCallback(){this.shadowRoot.querySelector("img").src=this.getAttribute("img"),this.shadowRoot.querySelector(".city").innerHTML=this.getAttribute("city"),this.shadowRoot.querySelector(".country").innerHTML=this.getAttribute("title")}}let x=document.createElement("template");x.innerHTML=`
-    <link rel="stylesheet" href="/src/style.css">   
+`; class j extends HTMLElement { constructor() { super(), console.log("created"), this.attachShadow({ mode: "open" }), this.shadowRoot.appendChild(f.content.cloneNode(!0)) } connectedCallback() { this.shadowRoot.querySelector("img").src = this.getAttribute("img"), this.shadowRoot.querySelector(".city").innerHTML = this.getAttribute("city"), this.shadowRoot.querySelector(".country").innerHTML = this.getAttribute("title") } } let x = document.createElement("template"); x.innerHTML = `
+  <link rel="stylesheet" href="assets/index-tJjReJRD.css">
+  <link rel="stylesheet" href="assets/index-BgSAnjhS.css">     
     <h2 class='text-2xl text-white flex justify-center items-center gap-2'><ion-icon name="logo-amplify"></ion-icon>GoTravel</h2>
-`;class q extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"}),this.shadowRoot.appendChild(x.content.cloneNode(!0))}}let w=document.createElement("template");w.innerHTML=`
+`; class q extends HTMLElement { constructor() { super(), this.attachShadow({ mode: "open" }), this.shadowRoot.appendChild(x.content.cloneNode(!0)) } } let w = document.createElement("template"); w.innerHTML = `
 
-    <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="assets/index-tJjReJRD.css">
+  <link rel="stylesheet" href="assets/index-BgSAnjhS.css">   
     <div class="flex gap-[4rem] flex-wrap">
     
         <div>
@@ -97,4 +104,4 @@
             </ul>    
         </div>
     </div>
-`;class R extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"}),this.shadowRoot.appendChild(w.content.cloneNode(!0))}}window.customElements.define("menu-header",k);window.customElements.define("title-header",L);window.customElements.define("main-slider",E);window.customElements.define("cart-item",T);window.customElements.define("user-comment",M);window.customElements.define("gallery-items",j);window.customElements.define("title-footer",q);window.customElements.define("items-footer",R);let d=document.querySelector("header");window.addEventListener("scroll",()=>{document.documentElement.scrollTop?d.classList.add("py-[1.5rem]"):d.classList.remove("py-[1.5rem]")});let C=new IntersectionObserver(function(o){o.forEach(function(t){t.isIntersecting?t.target.classList.add("show"):t.target.classList.remove("show")})}),A=document.querySelectorAll(".hidden-animation");A.forEach(o=>C.observe(o));
+`; class R extends HTMLElement { constructor() { super(), this.attachShadow({ mode: "open" }), this.shadowRoot.appendChild(w.content.cloneNode(!0)) } } window.customElements.define("menu-header", k); window.customElements.define("title-header", L); window.customElements.define("main-slider", E); window.customElements.define("cart-item", T); window.customElements.define("user-comment", M); window.customElements.define("gallery-items", j); window.customElements.define("title-footer", q); window.customElements.define("items-footer", R); let d = document.querySelector("header"); window.addEventListener("scroll", () => { document.documentElement.scrollTop ? d.classList.add("py-[1.5rem]") : d.classList.remove("py-[1.5rem]") }); let C = new IntersectionObserver(function (o) { o.forEach(function (t) { t.isIntersecting ? t.target.classList.add("show") : t.target.classList.remove("show") }) }), A = document.querySelectorAll(".hidden-animation"); A.forEach(o => C.observe(o));
